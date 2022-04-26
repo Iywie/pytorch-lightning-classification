@@ -1,0 +1,25 @@
+# Parameters
+model: 'vgg'
+datamodule: 'cifar10'
+
+dataset:
+    dir: 'D:\Code\Datasets\Classification\CIFAR10'
+    batch_size_train: 1024
+    batch_size_val: 1024
+    num_classes: 10
+    num_workers: 4
+
+backbone:
+    num_blocks: [1, 1, 2, 2, 2]
+
+train:
+    optimizer: 'SGD'
+    learning_rate: 0.001
+    momentum: 0.9
+
+
+# VGG-A: [1, 1, 2, 2, 2]
+# VGG-B: [2, 2, 2, 2, 2]
+# VGG-D: [2, 2, 3, 3, 3]
+# VGG-E: [2, 2, 4, 4, 4]
+

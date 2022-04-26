@@ -1,0 +1,25 @@
+# Parameters
+model: 'resnet'
+datamodule: 'cifar10'
+
+dataset:
+    dir: 'D:\Code\Datasets\Classification\CIFAR10'
+    batch_size_train: 1024
+    batch_size_val: 1024
+    num_classes: 10
+
+backbone:
+    block: 'BasicBlock'
+    num_block: [2, 2, 2, 2]
+
+train:
+    optimizer: 'SGD'
+    learning_rate: 0.001
+    momentum: 0.9
+
+
+# resnet18: BasicBlock, [2, 2, 2, 2]
+# resnet34: BasicBlock, [3, 4, 6, 3]
+# resnet50: BottleNeck, [3, 4, 6, 3]
+# resnet101: BottleNeck, [3, 4, 23, 3]
+# resnet152: BottleNeck, [3, 8, 36, 3]
